@@ -88,18 +88,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ChucVuController.cs" />
     <Compile Include="Controllers\HangSanXuatController.cs" />
+    <Compile Include="Controllers\KhachHangController.cs" />
     <Compile Include="Controllers\LinhKienController.cs" />
     <Compile Include="Controllers\LoaiLinhKienController.cs" />
     <Compile Include="Controllers\LuongController.cs" />
     <Compile Include="Controllers\NhaCungCapController.cs" />
     <Compile Include="Controllers\NhanVienController.cs" />
+    <Compile Include="Controllers\PhieuXuatController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -108,11 +114,13 @@
     <Compile Include="Models\ChiTietHD.cs" />
     <Compile Include="Models\ChiTietPhieuXuat.cs" />
     <Compile Include="Models\ChucVu.cs" />
+    <Compile Include="Models\CKhachHang.cs" />
     <Compile Include="Models\CLinhKien.cs" />
     <Compile Include="Models\CLoaiLinhKien.cs" />
     <Compile Include="Models\CLuong.cs" />
     <Compile Include="Models\CNhaCC.cs" />
     <Compile Include="Models\CNhanVien.cs" />
+    <Compile Include="Models\CPhieuXuat.cs" />
     <Compile Include="Models\HangSX.cs" />
     <Compile Include="Models\HoaDon.cs" />
     <Compile Include="Models\KhachHang.cs" />
@@ -127,6 +135,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -136,6 +148,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Data\" />
+    <Folder Include="Views\HoaDon\" />
+    <Folder Include="Views\KhachHang\" />
+    <Folder Include="Views\PhieuXuat\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
